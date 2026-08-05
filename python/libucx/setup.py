@@ -1,3 +1,5 @@
+# Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
 import glob
 import os
 import subprocess
@@ -23,7 +25,7 @@ class build_py(build_orig):
     def run(self):
         super().run()
 
-        with open("VERSION") as f:
+        with open("VERSION.txt") as f:
             package_version = f.read().strip()
 
         # strip off any other non-UCX version components, like ".post1"
